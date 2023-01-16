@@ -1,0 +1,59 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cmv:
+      branch: 146-improve-SQAaaS-score
+      repo: https://github.com/cessda/cessda.cmv
+    github.com/cessda/cessda.cmv.core:
+      branch: main
+      repo: https://github.com/cessda/cessda.cmv.core
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.cmv.core git:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-pink-harrier.sh
+        container: qc.acc_flabby-cinnamon-tortoise
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.cmv find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-rose-harrier.sh
+        container: qc.doc_beady-indigo-ostrich
+      github.com/cessda/cessda.cmv git:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-razzmatazz-echidna.sh
+        container: qc.doc_woolly-cardinal-lionfish
+      github.com/cessda/cessda.cmv markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-dandelion-chinook.sh
+        container: qc.doc_leaky-harlequin-buffalo
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.cmv.core licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-champagne-macaw.sh
+        container: qc.lic_hazy-malachite-nightingale
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.cmv.core checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-celadon-tuatara.sh
+        container: qc.sty_zippy-cornflower-buzzard
+      github.com/cessda/cessda.cmv.core jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-cobalt-beetle.sh
+        container: qc.sty_randy-pumpkin-meerkat
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.cmv.core get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-vermilion-spoonbill.sh
+        container: qc.ver_lumpy-seashell-antelope
+timeout: 5400
