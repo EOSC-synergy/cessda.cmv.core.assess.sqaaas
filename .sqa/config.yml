@@ -18,48 +18,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cmv.core git:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-ecru-zebra.sh
-        container: qc.acc_shaggy-razzmatazz-spaniel
+        - /usr/bin/env sh .sqa/script.goopy-cornflower-terrier.sh
+        container: qc.acc_slimy-mauve-squid
   QC.Doc:
     repos:
       github.com/cessda/cessda.cmv.documentation find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-sangria-setter.sh
-        container: qc.doc_bumpy-jade-cassowary
+        - /usr/bin/env sh .sqa/script.smelly-maroon-dunker.sh
+        container: qc.doc_lovely-wheat-starfish
       github.com/cessda/cessda.cmv.documentation git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-mustard-javanese.sh
-        container: qc.doc_lousy-gamboge-flounder
+        - /usr/bin/env sh .sqa/script.cloudy-teal-sloth.sh
+        container: qc.doc_skimpy-lime-wolf
       github.com/cessda/cessda.cmv.documentation markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-cinnabar-seahorse.sh
-        container: qc.doc_gloppy-peach-ray
+        - /usr/bin/env sh .sqa/script.chummy-malachite-tamarin.sh
+        container: qc.doc_skanky-sepia-barb
   QC.Lic:
     repos:
       github.com/cessda/cessda.cmv.core licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-cerulean-ferret.sh
-        container: qc.lic_snippy-smalt-octopus
+        - /usr/bin/env sh .sqa/script.silly-salmon-bee.sh
+        container: qc.lic_sleazy-celadon-salamander
   QC.Met:
     repos:
       github.com/cessda/cessda.cmv.core cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-emerald-gerbil.sh
-        container: qc.met_cloudy-burgundy-lemur
+        - /usr/bin/env sh .sqa/script.stuffy-chestnut-opossum.sh
+        container: qc.met_seedy-linen-fox
   QC.Sty:
     repos:
       github.com/cessda/cessda.cmv.core checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-champagne-hound.sh
-        container: qc.sty_lovely-saffron-earwig
+        - /usr/bin/env sh .sqa/script.lanky-cinnabar-dog.sh
+        container: qc.sty_muzzy-denim-squirrel
       github.com/cessda/cessda.cmv.core jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-brown-dollar.sh
-        container: qc.sty_blurry-russet-kiwi
+        - /usr/bin/env sh .sqa/script.snappy-copper-crocodile.sh
+        container: qc.sty_woolly-turquoise-ant
   QC.Ver:
     repos:
       github.com/cessda/cessda.cmv.core get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-aqua-dormouse.sh
-        container: qc.ver_cloudy-sepia-dolphin
+        - /usr/bin/env sh .sqa/script.wimpy-firebrick-frise.sh
+        container: qc.ver_chummy-grey-chicken
 timeout: 5400
