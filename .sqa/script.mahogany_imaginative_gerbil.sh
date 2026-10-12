@@ -5,5 +5,5 @@
 
 (
 cd github.com/cessda/cessda.cmv.core &&
-    cffconvert --validate
+    git rev-parse --is-inside-work-tree 
 )

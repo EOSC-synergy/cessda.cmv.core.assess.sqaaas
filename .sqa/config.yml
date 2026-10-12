@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda.cmv.core:
       branch: main
@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cmv.core git:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-periwinkle-buffalo.sh
-        container: qc.acc_foggy-lilac-mau
+        - /usr/bin/env sh .sqa/script.prussian_feisty_termite.sh
+        container: qc.acc_turquoise_realistic_elephant
   QC.Doc:
     repos:
       github.com/cessda/cessda.cmv.core find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-amber-swan.sh
-        container: qc.doc_paltry-myrtle-emu
+        - /usr/bin/env sh .sqa/script.claret_diplomatic_kingfisher.sh
+        container: qc.doc_gray_humble_hyena
       github.com/cessda/cessda.cmv.core git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-ivory-lemming.sh
-        container: qc.doc_greasy-white-scorpion
+        - /usr/bin/env sh .sqa/script.mahogany_imaginative_gerbil.sh
+        container: qc.doc_cinnamon_grateful_buffalo
       github.com/cessda/cessda.cmv.core markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-black-woodpecker.sh
-        container: qc.doc_skimpy-white-chinook
+        - /usr/bin/env sh .sqa/script.grege_supportive_seal.sh
+        container: qc.doc_orchid_studious_whale
   QC.Lic:
     repos:
       github.com/cessda/cessda.cmv.core licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-violet-worm.sh
-        container: qc.lic_gummy-wheat-sparrow
+        - /usr/bin/env sh .sqa/script.pineapple_dedicated_wasp.sh
+        container: qc.lic_scarlet_impulsive_seal
   QC.Met:
     repos:
       github.com/cessda/cessda.cmv.core cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-charcoal-dachshund.sh
-        container: qc.met_goopy-emerald-hare
+        - /usr/bin/env sh .sqa/script.fuchsia_joyful_nymph.sh
+        container: qc.met_amethyst_artistic_manta
   QC.Sty:
     repos:
       github.com/cessda/cessda.cmv.core checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-turquoise-angelfish.sh
-        container: qc.sty_jumpy-razzmatazz-dingo
+        - /usr/bin/env sh .sqa/script.pink_productive_catfish.sh
+        container: qc.sty_ginger_ardent_stingray
       github.com/cessda/cessda.cmv.core jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-jade-burmese.sh
-        container: qc.sty_cranky-razzmatazz-catfish
+        - /usr/bin/env sh .sqa/script.alabaster_reckless_leopard.sh
+        container: qc.sty_mustard_humorous_manatee
   QC.Ver:
     repos:
       github.com/cessda/cessda.cmv.core get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-champagne-labradoodle.sh
-        container: qc.ver_tacky-lime-dollar
+        - /usr/bin/env sh .sqa/script.smoke_radiant_viper.sh
+        container: qc.ver_tide_open_squid
 timeout: 5400

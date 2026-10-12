@@ -5,5 +5,5 @@
 
 (
 cd github.com/cessda/cessda.cmv.core &&
-    mdl --json .
+    git rev-parse --is-inside-work-tree 
 )

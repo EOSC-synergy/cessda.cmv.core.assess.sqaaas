@@ -1,5 +1,5 @@
 services:
-  qc.acc_foggy-lilac-mau:
+  qc.acc_turquoise_realistic_elephant:
     command: sleep 6000000
     image: bitnami/git:2.34.1
     volumes:
@@ -7,7 +7,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.doc_greasy-white-scorpion:
+  qc.doc_cinnamon_grateful_buffalo:
     command: sleep 6000000
     image: bitnami/git:2.34.1
     volumes:
@@ -15,7 +15,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.doc_paltry-myrtle-emu:
+  qc.doc_gray_humble_hyena:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Doc
       dockerfile: Dockerfile
@@ -25,7 +25,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.doc_skimpy-white-chinook:
+  qc.doc_orchid_studious_whale:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Doc/markdownlint
       dockerfile: Dockerfile
@@ -35,7 +35,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.lic_gummy-wheat-sparrow:
+  qc.lic_scarlet_impulsive_seal:
     command: sleep 6000000
     image: eoscsynergy/sqaaas-licensee:9.17.0
     volumes:
@@ -43,7 +43,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.met_goopy-emerald-hare:
+  qc.met_amethyst_artistic_manta:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Met/cff-converter-python
       dockerfile: Dockerfile
@@ -53,7 +53,15 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.sty_cranky-razzmatazz-catfish:
+  qc.sty_ginger_ardent_stingray:
+    command: sleep 6000000
+    image: maven
+    volumes:
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+  qc.sty_mustard_humorous_manatee:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Sty/jsonlint
       dockerfile: Dockerfile
@@ -63,15 +71,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.sty_jumpy-razzmatazz-dingo:
-    command: sleep 6000000
-    image: maven
-    volumes:
-    - source: ./
-      target: /sqaaas-build
-      type: bind
-    working_dir: /sqaaas-build
-  qc.ver_tacky-lime-dollar:
+  qc.ver_tide_open_squid:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Ver
       dockerfile: Dockerfile
